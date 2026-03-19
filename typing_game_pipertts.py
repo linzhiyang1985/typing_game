@@ -191,6 +191,8 @@ class TypingGame:
     
     def _init_voice(self):
         """初始化语音"""
+        """download voice model file from: https://huggingface.co/rhasspy/piper-voices/tree/main"""
+        
         self.voice = PiperVoice.load("en_GB-northern_english_male-medium.onnx")
         self.syn_config = SynthesisConfig(
             volume=0.8,  # half as loud
